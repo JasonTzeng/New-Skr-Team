@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 教室預約系統</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("教室預約系統", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
+                    <li>@Html.ActionLink("關於", "About", "Home")</li>
+                    <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+           <div id="leftCol">
+            <br /><br />
+            <p id="h2ListOfRoom">教室列表</p>
+            <a href="/">A203</a><br />
+            <a href="/">A204</a><br />
+            <a href="/">A205</a><br />
+            <a href="/">A206-電腦教室</a><br />
+            <a href="/">A207-視聽教室</a><br />
+            <a href="/">A208-電腦教室</a><br />
+            <a href="/">A209</a><br />
+            <a href="/">A210</a><br />
+            <a href="/">A211</a><br />
+            <a href="/">A212-(暫停借用)</a><br />
+            <a href="/">A301-會議室</a><br />
+            <a href="/">A302-會議室</a><br />
+            <a href="/">A226-會議室-小</a><br />
+            <a href="/">B326-會議室-小</a><br />
+            <a href="/">B223-會議室-大</a><br />
+            <a href="/">B323-會議室-大</a><br />
+            <a href="/">A303</a><br />
+            <a href="/">A306</a><br />
+            <a href="/">B217-軟硬體整合電腦教室</a><br />
+        </div>
+        @RenderBody()
+        <hr />
+        <footer id="content100">
+            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+        </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
